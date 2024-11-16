@@ -1,0 +1,55 @@
+
+.form-floating {
+    position: relative;
+  }
+  
+  .form-floating > .form-control,
+  .form-floating > .form-select {
+    height: /* replace with $form-floating-height */;
+    padding: /* replace with $form-floating-padding-y */ /* replace with $form-floating-padding-x */;
+  }
+  
+  .form-floating > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; /* allow textareas */
+    padding: /* replace with $form-floating-padding-y */ /* replace with $form-floating-padding-x */;
+    pointer-events: none;
+    border: /* replace with $input-border-width */ solid transparent;
+    transform-origin: 0 0;
+    transition: /* replace with $form-floating-transition */;
+  }
+  
+  .form-floating > .form-control::placeholder {
+    color: transparent;
+  }
+  
+  .form-floating > .form-control:focus,
+  .form-floating > .form-control:not(:placeholder-shown) {
+    padding-top: /* replace with $form-floating-input-padding-t */;
+    padding-bottom: /* replace with $form-floating-input-padding-b */;
+  }
+  
+  .form-floating > .form-control:-webkit-autofill {
+    padding-top: /* replace with $form-floating-input-padding-t */;
+    padding-bottom: /* replace with $form-floating-input-padding-b */;
+  }
+  
+  .form-floating > .form-select {
+    padding-top: /* replace with $form-floating-input-padding-t */;
+    padding-bottom: /* replace with $form-floating-input-padding-b */;
+  }
+  
+  .form-floating > .form-control:focus ~ label,
+  .form-floating > .form-control:not(:placeholder-shown) ~ label,
+  .form-floating > .form-select ~ label {
+    opacity: /* replace with $form-floating-label-opacity */;
+    transform: /* replace with $form-floating-label-transform */;
+  }
+  
+  .form-floating > .form-control:-webkit-autofill ~ label {
+    opacity: /* replace with $form-floating-label-opacity */;
+    transform: /* replace with $form-floating-label-transform */;
+  }
+  

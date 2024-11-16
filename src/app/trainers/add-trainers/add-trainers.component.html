@@ -1,0 +1,54 @@
+
+<div class="container-fluid position-relative d-flex p-0">
+
+
+    <!-- Sign Up Start -->
+    <div class="container-fluid">
+        <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+            <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-5">
+                <div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <a href="index.html" class="">
+                            <h3 class="text-primary">Add Trainers</h3>
+                        </a>
+                        <h3></h3>
+                    </div>
+                    <form th:action="@{/createTrainers}" method="post" class="signin-form" th:object="${trainer}">
+                    <div class="form-floating mb-3">
+                        <input type="text" th:field="*{name}" class="form-control" id="floatingText" placeholder="jhondoe" >
+                        <label for="floatingText">Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" th:field="*{email}" class="form-control" id="floatingInput" placeholder="name@example.com" >
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" th:field="*{mobileNumber}" class="form-control" id="" placeholder="mobile number" >
+                        <label for="floatingInput">Mobile Number</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                            <input type="text" th:field="*{specializedIn}" class="form-control" id="" placeholder="specialized in" >
+                            <label for="floatingInput">Specialized In</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                            <input type="text" th:field="*{emolument}" class="form-control" id="" placeholder="emolument" >
+                            <label for="floatingInput">Emolument</label>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <input type="password" th:field="*{pwd}" class="form-control" id="floatingPassword" placeholder="Password" >
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <input type="password" th:field="*{confirmPwd}" class="form-control" id="" placeholder="Password" >
+                        <label for="floatingPassword">Confirm Password</label>
+                    </div>
+                    <button  class="btn btn-primary py-3 w-100 mb-4">Add</button>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Sign Up End -->
+</div>

@@ -1,0 +1,91 @@
+/*!
+ * Bootstrap v5.0.0 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+// scss-docs-start import-stack
+// Configuration
+@import "functions";
+@import "variables";
+@import "mixins/alert";
+@import "mixins/border-radius";
+@import "mixins/box-shadow";
+@import "mixins/breakpoints";
+@import "mixins/buttons";
+@import "mixins/caret";
+@import "mixins/clearfix";
+@import "mixins/color-scheme";
+@import "mixins/container";
+@import "mixins/deprecate";
+@import "mixins/forms";
+@import "mixins/gradients";
+@import "mixins/grid";
+@import "mixins/image";
+@import "mixins/list-group";
+@import "mixins/lists";
+@import "mixins/pagination";
+@import "mixins/reset-text";
+@import "mixins/resize";
+@import "mixins/table-variants";
+@import "mixins/text-truncate";
+@import "mixins/transition";
+@import "mixins/utilities";
+@import "mixins/visually-hidden";
+@import "utilities";
+@import "vendor/rfs";
+@import "utilities/api";
+
+// Layout & components
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "containers";
+@import "grid";
+@import "tables";
+@import "forms/floating-labels";
+@import "forms/form-check";
+@import "forms/form-control";
+@import "forms/form-range";
+@import "forms/form-select";
+@import "forms/form-text";
+@import "forms/input-group";
+@import "forms/labels";
+@import "forms/validation";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "accordion";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "alert";
+@import "progress";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "offcanvas";
+
+// Helpers
+@import "helpers/clearfix";
+@import "helpers/colored-links";
+@import "helpers/position";
+@import "helpers/ratio";
+@import "helpers/stretched-link";
+@import "helpers/text-truncation";
+@import "helpers/visually-hidden";
+
+// Utilities
+@import "utilities/api";
+// scss-docs-end import-stack
