@@ -6,6 +6,7 @@ import { TrainersComponent } from './trainers/trainers.component';
 import { ClientsComponent } from './clients/clients.component';
 import { AddClientsComponent } from './clients/add-clients/add-clients.component';
 import { AddTrainersComponent } from './trainers/add-trainers/add-trainers.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 export const routes: Routes = [
     {
@@ -20,17 +21,28 @@ export const routes: Routes = [
         component:EnquiryComponent
     },{
         path:'displayTrainers',
-        component:TrainersComponent
+        component:TrainersComponent,
+        children:[
+            
+        ]
     },{
         path:'displayClients',
-        component:ClientsComponent
+        component:ClientsComponent,
+        children:[
+            
+        ]
     },
     {
-        path:'addClients',
+        path:'displayTrainers/addTrainers',
+        component:AddTrainersComponent
+    },
+    {
+        path:'displayClients/addClients',
         component:AddClientsComponent 
     },
     {
-        path:'addTrainers',
-        component:AddTrainersComponent
+        path:'**',
+        component:NotFoundComponent
     }
+    
 ];

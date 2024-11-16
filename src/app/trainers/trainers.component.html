@@ -136,7 +136,7 @@
                 <div class="d-flex align-items-center justify-content-between mb-4">
                     <h6 class="mb-0">Trainers</h6>
                     <div class="d-flex align-items-center buttons-banner">
-                        <a routerLink="/addTrainers" class="btn btn-style btn-primary mt-lg-5 mt-4">Add Trainers</a>
+                        <a routerLink="/displayTrainers/addTrainers" class="btn btn-style btn-primary mt-lg-5 mt-4">Add Trainers</a>
                     </div>
                 </div>
                 <div class="table-responsive"  th:object="${trainers}">
@@ -176,5 +176,7 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 </div>
+
+<router-outlet/>
 
 
