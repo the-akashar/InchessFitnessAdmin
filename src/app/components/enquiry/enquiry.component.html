@@ -50,9 +50,8 @@
                 <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars"></i>
                 </a>
-                <form class="d-none d-md-flex ms-4">
-                    <input class="form-control bg-dark border-0" type="search" placeholder="Search">
-                </form>
+                <app-search/>
+
                 <div class="navbar-nav align-items-center ms-auto">
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
@@ -135,7 +134,7 @@
 
             <!-- Table Start -->
             <div class="container-fluid pt-4 px-4">
-                <div class="bg-secondary text-center rounded p-4">
+                <div class="bg-white text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h6 class="mb-0">Recent Enquiries</h6>
                         <a href="">Show All</a>
@@ -155,18 +154,21 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr th:each="msg:${contactMsg}">
-                                <td th:text="${msg.name}"></td>
-                                <td th:text="${msg.email}"></td>
-                                <td th:text="${msg.mobileNum}"></td>
-                                <td th:text="${msg.goal}"></td>
-                                <td th:text="${msg.message}"></td>
-                                <td th:text="${msg.status}"></td>
+                            <tr *ngFor="let enquiry of enquires">
+                                <td >{{enquiry.name}}</td>
+                                <td >{{enquiry.email}}</td>
+                                <td >{{enquiry.mobileNum}}</td>
+                                <td >{{enquiry.goal}}</td>
+                                <td >{{enquiry.message}}</td>
+                                <td >{{enquiry.status}}</td>
                                 <td><a th:href="@{/addClient(id=${msg.contactId})}" class="btn btn-success">ADD</a></td>
                                 <td ><a th:href="@{/deleteEnquiry(id=${msg.contactId})}"  class="btn btn-warning">DELETE</a></td>
                             </tr>
                             </tbody>
                         </table>
+                    </div>
+                    <div *ngIf="enquires?.length==0" class="alert alert-warning col-md-12" role="alert">
+                        Name is not found!!!
                     </div>
                 </div>
             </div>

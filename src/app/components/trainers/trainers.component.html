@@ -132,14 +132,14 @@
 
         <!-- Table Start -->
         <div class="container-fluid pt-4 px-4">
-            <div class="bg-secondary text-center rounded p-4">
+            <div class="bg-white text-center rounded p-4">
                 <div class="d-flex align-items-center justify-content-between mb-4">
                     <h6 class="mb-0">Trainers</h6>
                     <div class="d-flex align-items-center buttons-banner">
                         <a routerLink="/displayTrainers/addTrainers" class="btn btn-style btn-primary mt-lg-5 mt-4">Add Trainers</a>
                     </div>
                 </div>
-                <div class="table-responsive"  th:object="${trainers}">
+                <div class="table-responsive"  >
                     <table class="table text-start align-middle table-bordered table-hover mb-0">
                         <thead>
                         <tr class="text-white">
@@ -153,14 +153,14 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr th:each="list:${trainersList}">
-                            <td th:text="${list.name}"></td>
-                            <td th:text="${list.email}"></td>
-                            <td th:text="${list.mobileNumber}"></td>
-                            <td th:text="${list.specializedIn}"></td>
-                            <td th:text="${list.emolument}"></td>
+                        <tr *ngFor="let trainer of trainers">
+                            <td >{{trainer.name}}</td>
+                            <td >{{trainer.email}}</td>
+                            <td >{{trainer.mobileNumber}}</td>
+                            <td >{{trainer.specializedIn}}</td>
+                            <td >{{trainer.emolument}}</td>
                             <td><a  class="btn btn-success">VIEW</a></td>
-                            <td><a th:href="@{/deleteTrainers(id=${list.trainersid})}" class="btn btn-warning">DELETE</a></td>
+                            <td><a  class="btn btn-warning">DELETE</a></td>
                         </tr>
                         </tbody>
                     </table>
@@ -176,7 +176,5 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 </div>
-
-<router-outlet/>
 
 

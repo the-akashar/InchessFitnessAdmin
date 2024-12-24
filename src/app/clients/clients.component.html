@@ -133,7 +133,7 @@
 
         <!-- Table Start -->
         <div class="container-fluid pt-4 px-4">
-            <div class="bg-secondary text-center rounded p-4">
+            <div class="bg-white text-center rounded p-4">
                 <div class="d-flex align-items-center justify-content-between mb-4">
                     <h6 class="mb-0">Clients</h6>
                     <div class="d-flex align-items-center buttons-banner">
@@ -155,13 +155,13 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr th:each="client:${clientsList}">
-                            <td th:text="${client.name}"></td>
-                            <td th:text="${client.email}"></td>
-                            <td th:text="${client.mobileNumber}"></td>
-                            <td th:text="${client.goal}"></td>
-                            <td th:text="${client.trainer}"></td>
-                            <td th:text="${client.fees}"></td>
+                        <tr *ngFor="let client of clients">
+                            <td >{{client.name}}</td>
+                            <td >{{client.email}}</td>
+                            <td >{{client.mobileNumber}}</td>
+                            <td >{{client.goal}}</td>
+                            <td >{{client.trainer}}</td>
+                            <td >{{client.fees}}</td>
                             <td><a  class="btn btn-success">VIEW</a></td>
                             <td ><a th:href="@{/deleteClients(id=${client.clientsId})}"  class="btn btn-warning">DELETE</a></td>
                         </tr>
